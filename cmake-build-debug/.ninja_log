@@ -1,0 +1,17 @@
+# ninja log v5
+0	752	1677987614902963537	CMakeFiles/hackdis-server.dir/server/main.cpp.o	f25a3fdce0424d1a
+0	775	1677987614928910995	CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o	fb44584f9d74ba79
+776	890	1677987615046401062	hackdis-server	824e36adb8706f40
+0	542	1677987623863002842	CMakeFiles/hackdis-client.dir/client/main.cpp.o	49bcd73620e13eb
+1	549	1677987623871241058	CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o	79e3821613f82d2
+549	621	1677987623944004738	hackdis-client	d2523c2977324548
+20	776	1677990672480339402	CMakeFiles/hackdis-client.dir/client/main.cpp.o	49bcd73620e13eb
+21	777	1677990672483445445	CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o	79e3821613f82d2
+777	854	1677990672563673145	hackdis-client	d2523c2977324548
+4	638	1677990689921947568	CMakeFiles/hackdis-server.dir/server/main.cpp.o	f25a3fdce0424d1a
+5	642	1677990689928090445	CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o	fb44584f9d74ba79
+642	715	1677990690003778999	hackdis-server	824e36adb8706f40
+5	598	1677990742964940443	CMakeFiles/hackdis-server.dir/server/main.cpp.o	f25a3fdce0424d1a
+598	675	1677990743043427744	hackdis-server	824e36adb8706f40
+5	680	1677990768813128610	CMakeFiles/hackdis-client.dir/client/main.cpp.o	49bcd73620e13eb
+680	756	1677990768893499813	hackdis-client	d2523c2977324548

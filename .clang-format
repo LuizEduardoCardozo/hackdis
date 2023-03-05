@@ -1,0 +1,95 @@
+Language: Cpp
+AccessModifierOffset: -2
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: DontAlign
+AlignOperands: false
+AlignTrailingComments: false
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterExternBlock: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: false
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyNamespace: true
+  SplitEmptyRecord: true
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Custom
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+ColumnLimit: 120
+CompactNamespaces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 0
+ContinuationIndentWidth: 2
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+DisableFormat: false
+FixNamespaceComments: true
+ForEachMacros: ['foreach', 'Q_FOREACH', 'BOOST_FOREACH']
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority: 2
+  - Regex: '^(<boost/)'
+    Priority: 1
+  - Regex: '.*'
+    Priority: 3
+IncludeIsMainRegex: 'a-ridiculous-chain-of-characters-to-allow-our-desired-sorting-of-includes'
+IndentCaseLabels: false
+IndentPPDirectives: AfterHash
+IndentWidth: 2
+IndentWrappedFunctionNames: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 60
+PointerAlignment: Left
+ReflowComments: true
+SortIncludes: CaseSensitive
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpacesBeforeTrailingComments: 1
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: true
+SpacesInSquareBrackets: true
+Standard: c++20
+UseTab: Never

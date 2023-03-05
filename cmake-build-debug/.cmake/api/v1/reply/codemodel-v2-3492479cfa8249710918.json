@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Hackdis",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "hackdis-client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hackdis-client-Debug-498e2c594eee0d2fbe58.json",
+					"name" : "hackdis-client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hackdis-server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hackdis-server-Debug-3cd25ed22de549b2045f.json",
+					"name" : "hackdis-server",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/fluencyacademy/CLionProjects/Hackdis/cmake-build-debug",
+		"source" : "/Users/fluencyacademy/CLionProjects/Hackdis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

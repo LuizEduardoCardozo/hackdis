@@ -1,0 +1,4 @@
+/Users/fluencyacademy/CLionProjects/Hackdis/cmake-build-debug/CMakeFiles/hackdis-server.dir
+/Users/fluencyacademy/CLionProjects/Hackdis/cmake-build-debug/CMakeFiles/hackdis-client.dir
+/Users/fluencyacademy/CLionProjects/Hackdis/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fluencyacademy/CLionProjects/Hackdis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
