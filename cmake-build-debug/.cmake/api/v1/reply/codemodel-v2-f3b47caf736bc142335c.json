@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "hackdis-client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hackdis-client-Debug-498e2c594eee0d2fbe58.json",
+					"jsonFile" : "target-hackdis-client-Debug-86669b23b11c2176f010.json",
 					"name" : "hackdis-client",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "hackdis-server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hackdis-server-Debug-3cd25ed22de549b2045f.json",
+					"jsonFile" : "target-hackdis-server-Debug-1a940e684488489d5b85.json",
 					"name" : "hackdis-server",
 					"projectIndex" : 0
 				}

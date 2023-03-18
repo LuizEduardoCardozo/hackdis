@@ -58,6 +58,18 @@ build CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o: CXX_COMPILER__ha
   OBJECT_DIR = CMakeFiles/hackdis-server.dir
   OBJECT_FILE_DIR = CMakeFiles/hackdis-server.dir/common/logger
 
+build CMakeFiles/hackdis-server.dir/common/socket_io/read.cpp.o: CXX_COMPILER__hackdis-server_Debug /Users/fluencyacademy/CLionProjects/Hackdis/common/socket_io/read.cpp || cmake_object_order_depends_target_hackdis-server
+  DEP_FILE = CMakeFiles/hackdis-server.dir/common/socket_io/read.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/hackdis-server.dir
+  OBJECT_FILE_DIR = CMakeFiles/hackdis-server.dir/common/socket_io
+
+build CMakeFiles/hackdis-server.dir/common/socket_io/write.cpp.o: CXX_COMPILER__hackdis-server_Debug /Users/fluencyacademy/CLionProjects/Hackdis/common/socket_io/write.cpp || cmake_object_order_depends_target_hackdis-server
+  DEP_FILE = CMakeFiles/hackdis-server.dir/common/socket_io/write.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/hackdis-server.dir
+  OBJECT_FILE_DIR = CMakeFiles/hackdis-server.dir/common/socket_io
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target hackdis-server
@@ -66,7 +78,7 @@ build CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o: CXX_COMPILER__ha
 #############################################
 # Link the executable hackdis-server
 
-build hackdis-server: CXX_EXECUTABLE_LINKER__hackdis-server_Debug CMakeFiles/hackdis-server.dir/server/main.cpp.o CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o
+build hackdis-server: CXX_EXECUTABLE_LINKER__hackdis-server_Debug CMakeFiles/hackdis-server.dir/server/main.cpp.o CMakeFiles/hackdis-server.dir/common/logger/Logger.cpp.o CMakeFiles/hackdis-server.dir/common/socket_io/read.cpp.o CMakeFiles/hackdis-server.dir/common/socket_io/write.cpp.o
   FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/hackdis-server.dir
   POST_BUILD = :
@@ -95,6 +107,18 @@ build CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o: CXX_COMPILER__ha
   OBJECT_DIR = CMakeFiles/hackdis-client.dir
   OBJECT_FILE_DIR = CMakeFiles/hackdis-client.dir/common/logger
 
+build CMakeFiles/hackdis-client.dir/common/socket_io/read.cpp.o: CXX_COMPILER__hackdis-client_Debug /Users/fluencyacademy/CLionProjects/Hackdis/common/socket_io/read.cpp || cmake_object_order_depends_target_hackdis-client
+  DEP_FILE = CMakeFiles/hackdis-client.dir/common/socket_io/read.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/hackdis-client.dir
+  OBJECT_FILE_DIR = CMakeFiles/hackdis-client.dir/common/socket_io
+
+build CMakeFiles/hackdis-client.dir/common/socket_io/write.cpp.o: CXX_COMPILER__hackdis-client_Debug /Users/fluencyacademy/CLionProjects/Hackdis/common/socket_io/write.cpp || cmake_object_order_depends_target_hackdis-client
+  DEP_FILE = CMakeFiles/hackdis-client.dir/common/socket_io/write.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/hackdis-client.dir
+  OBJECT_FILE_DIR = CMakeFiles/hackdis-client.dir/common/socket_io
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target hackdis-client
@@ -103,7 +127,7 @@ build CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o: CXX_COMPILER__ha
 #############################################
 # Link the executable hackdis-client
 
-build hackdis-client: CXX_EXECUTABLE_LINKER__hackdis-client_Debug CMakeFiles/hackdis-client.dir/client/main.cpp.o CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o
+build hackdis-client: CXX_EXECUTABLE_LINKER__hackdis-client_Debug CMakeFiles/hackdis-client.dir/client/main.cpp.o CMakeFiles/hackdis-client.dir/common/logger/Logger.cpp.o CMakeFiles/hackdis-client.dir/common/socket_io/read.cpp.o CMakeFiles/hackdis-client.dir/common/socket_io/write.cpp.o
   FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/hackdis-client.dir
   POST_BUILD = :

@@ -1,22 +1,78 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
-#include <unistd.h>
 
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
 #include "../common/logger/Logger.h"
+#include "../common/socket_io/read.h"
+#include "../common/socket_io/write.h"
+
+const int HEADER_SIZE = 4;
+const int NULLBYTE_SIZE = 1;
 
 const int PORT = 5643;
 const int ADDR = 0;
-const size_t MESSAGE_SIZE = 64;
+const size_t MESSAGE_SIZE = 4096;
+
+int8_t handle_request(int socket_connection_fd)
+{
+  char read_buffer[ HEADER_SIZE + MESSAGE_SIZE + NULLBYTE_SIZE ];
+  int8_t read_error, write_error;
+
+  errno = 0;
+
+  read_error = read_a( socket_connection_fd, read_buffer, HEADER_SIZE );
+  if ( read_error )
+  {
+    if(errno == 0)
+    {
+      Logger::Error( "SERVER", "EOF" );
+    } else {
+      Logger::Error( "SERVER", "read error" );
+    }
+
+    return read_error;
+  }
+
+  size_t payload_len = 0;
+  memcpy( &payload_len, read_buffer, HEADER_SIZE );
+  if ( payload_len > MESSAGE_SIZE )
+  {
+    Logger::Error("SERVER", "received message is too long");
+  }
+
+  read_error = read_a(socket_connection_fd, &read_buffer[HEADER_SIZE], payload_len);
+  if(read_error == -1)
+  {
+    Logger::Error("SERVER", "error while reading the message");
+  }
+
+  read_buffer[HEADER_SIZE + payload_len] = '\0';
+  Logger::Info("SERVER", std::string("Client said: ") + std::string(&read_buffer[HEADER_SIZE]));
+
+  const char reply[] = "Server response";
+
+  size_t reply_size = sizeof(reply);
+  size_t payload_size = HEADER_SIZE + reply_size;
+
+  char response_buffer[payload_size];
+
+  memcpy(response_buffer, &reply_size, HEADER_SIZE);
+  memcpy(&response_buffer[HEADER_SIZE], reply, payload_size);
+
+  write_error = write_a(socket_connection_fd, response_buffer, payload_size);
+
+  return write_error;
+}
+
 
 int main()
 {
   Logger logger( "SERVER" );
 
-  int opt = 1, new_connection_fd, rv, result;
+  int opt = 1, new_connection_fd, rv; //result;
   struct sockaddr_in addr {
   };
   struct sockaddr_in client_addr {
@@ -63,21 +119,7 @@ int main()
       continue;
     }
 
-    char client_message_buffer[ MESSAGE_SIZE ] = {};
-    result = static_cast<int>( read( new_connection_fd, client_message_buffer, MESSAGE_SIZE - 1 ) );
-    if ( result == -1 )
-    {
-      logger.Error( "read() error" );
-      exit( 1 );
-    }
-
-    logger.Info( "message received successfully" );
-
-    logger.Info( std::string( "client says: " ) + std::string( client_message_buffer ) );
-
-    char server_sending_message[] = "world";
-    write( new_connection_fd, server_sending_message, strlen( server_sending_message ) );
-
-    close( new_connection_fd );
+      int8_t err = handle_request(new_connection_fd);
+      if (err) break;
   }
 }
