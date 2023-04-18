@@ -28,12 +28,12 @@ public:
   STATE state = STATE::REQ;
 
   size_t read_buffer_size = 0;
-  uint8_t read_buffer[MSG_BUFFER_SIZE];
+  uint8_t read_buffer[MSG_BUFFER_SIZE]{};
 
   size_t write_buffer_size = 0;
-  size_t write_buffer[MSG_BUFFER_SIZE];
+  uint8_t write_buffer[MSG_BUFFER_SIZE]{};
 
-  bool write_buffer_sent = false;
+  size_t write_buffer_sent = 0;
 };
 
 #endif

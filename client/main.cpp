@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <cstring>
 
 #include "../common/logger/Logger.h"
 #include "../common/socket_io/read.h"
@@ -32,9 +33,11 @@ int query( int socked_connection_fd, const char* msg )
 
   write_error = write_a( socked_connection_fd, send_message_buffer, HEADER_SIZE + msg_len );
   if ( write_error )
+  {
     return write_error;
+  }
 
-  Logger::Info("CLIENT", "Message sent to the server | " + std::string(send_message_buffer));
+  Logger::Info("CLIENT", "Message sent to the server | " + std::string(&send_message_buffer[HEADER_SIZE]));
 
   char response_buffer[ HEADER_SIZE + MESSAGE_SIZE + NULLBYTE_SIZE ];
   errno = 0;
@@ -52,12 +55,7 @@ int query( int socked_connection_fd, const char* msg )
     }
   }
 
-  Logger::Info("CLIENT", std::to_string(msg_len));
-
   memcpy(&msg_len, response_buffer, HEADER_SIZE);
-
-  Logger::Info("CLIENT", std::to_string(msg_len));
-  Logger::Info("CLIENT", std::to_string(MESSAGE_SIZE));
 
   if(msg_len > MESSAGE_SIZE)
   {
@@ -75,7 +73,7 @@ int query( int socked_connection_fd, const char* msg )
 
   response_buffer[HEADER_SIZE + msg_len] = '\0';
 
-  Logger::Info("CLIENT", std::string("server says: ") + std::string(&response_buffer[HEADER_SIZE]));
+  Logger::Info("CLIENT", "Message received from server | " + std::string(&response_buffer[HEADER_SIZE]));
 
   return 0;
 }
